@@ -7,6 +7,8 @@ import com.example.pagingdemo.network.GitHubServices
 import com.example.pagingdemo.paging.RepoPagingSource
 import kotlinx.coroutines.flow.Flow
 
+
+/**使用Flow協程返回Flow<PagingData<Repo>>其中Repo可依據內容更改，其餘為公版*/
 object Repository {
 
     private const val PAGE_SIZE = 50

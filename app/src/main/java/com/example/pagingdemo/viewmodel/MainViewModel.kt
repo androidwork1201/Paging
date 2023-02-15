@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.Flow
 
 class MainViewModel: ViewModel() {
 
+    /**調用Repository.getPagingData()並加上cachedIn()執行緩衝加載*/
     fun getPagingData(): Flow<PagingData<Repo>> {
         return Repository.getPagingData().cachedIn(viewModelScope)
     }

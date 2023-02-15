@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.recycler.layoutManager = LinearLayoutManager(this)
         binding.recycler.adapter = repoAdapter
 
+        /**調用submitData觸發Paging 3分頁功能*/
         lifecycleScope.launch {
             viewModel.getPagingData().collect() { pagingData ->
                 repoAdapter.submitData(pagingData)

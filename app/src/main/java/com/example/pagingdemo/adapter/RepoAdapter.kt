@@ -10,6 +10,8 @@ import com.example.pagingdemo.databinding.LayoutItemBinding
 
 import com.example.pagingdemo.model.Repo
 
+/**加入DiffUtil管理數據變化並使用viewBinding簡化綁定元件步驟*/
+
 class RepoAdapter : PagingDataAdapter<Repo, RepoAdapter.ViewHolder>(COMPARATOR) {
 
     companion object {
